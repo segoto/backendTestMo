@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+{% block content %}
+    <h3>{{pokemon.name}}</h3>
+    <h4>Características</h4>
+    <ul>
+    <li> id: {{ pokemon.pokemon}}</li>
+    <li>height: {{ pokemon.height }}</li>
+    <li>weight: {{ pokemon.weight }}</li>
+    </ul>
+    <h4>Base stats</h4>
+    {% if base_stats %}
+        <ul>
+        {% for bs in base_stats %}
+            <li>{{ bs.name }}: {{ bs.base_stat }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        No hay base stats disponibles
+    {% endif %}
+    <h4>Evoluciones</h4>
+    {% if evolutions %}
+        <ul>
+        {% for evol in evolutions %}
+            <li>{{ evol.name }}: {{ evol.evolution_type }}, id : {{ evol.pokemon_identification }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        No hay evoluciones disponibles
+    {% endif %}
+    <button onclick="window.location.href='/pokemons/search'">Buscar nuevo pokemon</button>
+{% endblock %}

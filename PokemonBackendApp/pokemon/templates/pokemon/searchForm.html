@@ -1,0 +1,7 @@
+{% extends 'home.html' %}
+{% block content %}
+    <h3>Escribe el nombre del pokemon del que quieres saber más y pulsa enter</h3>
+    <form  action ="{% url 'pokemonEncontrado' %}" method="GET">
+        <input type="text" name="name" placeholder="Nombre del Pokemon">
+    </form>
+{% endblock %}

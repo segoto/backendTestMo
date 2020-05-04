@@ -1,0 +1,13 @@
+__pycache__/
+.venv
+
+# django migrations 
+
+**/migrations/**
+
+!**/migrations
+
+!**/migrations/__init__.py
+*.sqlite3
+.DS_Store
+.idea

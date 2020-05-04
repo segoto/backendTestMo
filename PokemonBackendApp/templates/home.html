@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block head %}
+        <title>Pokemon Mo</title>
+        {% endblock %}
+    </head>
+    <body>
+        <h1>Backend test Pokemon</h1>
+        {% if not 'pokemons' in request.path %}
+        <a href="/pokemons/search">Busqueda</a>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </body>
+</htm>

@@ -1,7 +1,7 @@
 # backendTestMo
 Create a Django command that retrieves data from pokeapi.co and stores it in a local database. In additon, you may find information about the pokemon.
 
-#Running instructions
+## Running instructions
 1. clone the repository.
 2. access to the PokemonBackendApp
 3. run pip install -r requirements.txt
